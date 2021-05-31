@@ -2,6 +2,7 @@ package com.devglan.userportal;
 
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
 import java.util.List;
 @Service
 public interface UserService {
@@ -10,7 +11,7 @@ public interface UserService {
 
     User delete(int id);
 
-    List<User> findAll();
+    List<User> findAll() throws IOException, InterruptedException;
 
     User findById(int id);
 
